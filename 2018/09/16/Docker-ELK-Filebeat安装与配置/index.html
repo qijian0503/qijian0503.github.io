@@ -73,13 +73,13 @@
 
 
 
-<meta name="description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0   elk跟filebeat在同一台机器上  架构 Elasticsearch一个近乎实时查询的全文搜索引擎。Elasticsearch 的设计目标就是要能够处理和搜">
+<meta name="description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0">
 <meta name="keywords" content="elk,docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker ELK+Filebeat安装与配置">
 <meta property="og:url" content="http://geekstar.site/2018/09/16/Docker-ELK-Filebeat安装与配置/index.html">
 <meta property="og:site_name" content="qijian技术栈">
-<meta property="og:description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0   elk跟filebeat在同一台机器上  架构 Elasticsearch一个近乎实时查询的全文搜索引擎。Elasticsearch 的设计目标就是要能够处理和搜">
+<meta property="og:description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-5ce325d59f634541.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-4a5ad23aff2691ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -91,10 +91,10 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-a38009e67b46926f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-61c7928fceea6c5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-39d5b4988c00d106.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-16T08:21:44.172Z">
+<meta property="og:updated_time" content="2018-09-16T11:46:18.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker ELK+Filebeat安装与配置">
-<meta name="twitter:description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0   elk跟filebeat在同一台机器上  架构 Elasticsearch一个近乎实时查询的全文搜索引擎。Elasticsearch 的设计目标就是要能够处理和搜">
+<meta name="twitter:description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8760038-5ce325d59f634541.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -342,12 +342,12 @@
 <li>linux<br>CentOS Linux release 7.5.1804 (Core)</li>
 <li>docker<br>Docker version 1.13.1</li>
 <li>elk<br>sebp/elk latest</li>
-<li>filebeat<br>filebeat-6.4.0</li>
-</ul>
+<li><p>filebeat<br>filebeat-6.4.0</p>
+<a id="more"></a>
 <blockquote>
 <p>elk跟filebeat在同一台机器上</p>
 </blockquote>
-<h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><ul>
+<h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3></li>
 <li><p>Elasticsearch<br>一个近乎实时查询的全文搜索引擎。Elasticsearch 的设计目标就是要能够处理和搜索巨量的日志数据。</p>
 </li>
 <li><p>Logstash<br>读取原始日志，并对其进行分析和过滤，然后将其转发给其他组件（比如 Elasticsearch）进行索引或存储。Logstash 支持丰富的 Input 和 Output 类型，能够处理各种应用的日志。</p>
