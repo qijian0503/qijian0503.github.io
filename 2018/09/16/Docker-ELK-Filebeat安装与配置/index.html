@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="elk,docker," />
 
 
 
@@ -79,16 +79,29 @@
 
 
 
-<meta name="description" content="技术栈">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://geekstar.site/index.html">
+<meta name="description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0   elk跟filebeat在同一台机器上  架构 Elasticsearch一个近乎实时查询的全文搜索引擎。Elasticsearch 的设计目标就是要能够处理和搜">
+<meta name="keywords" content="elk,docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker ELK+Filebeat安装与配置">
+<meta property="og:url" content="http://geekstar.site/2018/09/16/Docker-ELK-Filebeat安装与配置/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="技术栈">
+<meta property="og:description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0   elk跟filebeat在同一台机器上  架构 Elasticsearch一个近乎实时查询的全文搜索引擎。Elasticsearch 的设计目标就是要能够处理和搜">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-5ce325d59f634541.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-4a5ad23aff2691ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-a5cf52ea8fa0dc8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-0a2f8359c871ff4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-d21dcc3717f47e10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-270f3c4268a3e1af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-88d0a8e129db4f05.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-a38009e67b46926f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-61c7928fceea6c5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-39d5b4988c00d106.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-16T08:21:44.172Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="技术栈">
+<meta name="twitter:title" content="Docker ELK+Filebeat安装与配置">
+<meta name="twitter:description" content="环境说明 linuxCentOS Linux release 7.5.1804 (Core) dockerDocker version 1.13.1 elksebp/elk latest filebeatfilebeat-6.4.0   elk跟filebeat在同一台机器上  架构 Elasticsearch一个近乎实时查询的全文搜索引擎。Elasticsearch 的设计目标就是要能够处理和搜">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8760038-5ce325d59f634541.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -118,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://geekstar.site/"/>
+  <link rel="canonical" href="http://geekstar.site/2018/09/16/Docker-ELK-Filebeat安装与配置/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Docker ELK+Filebeat安装与配置 | Hexo</title>
   
 
 
@@ -143,8 +156,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +229,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -249,9 +261,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/16/Docker-ELK-Filebeat安装与配置/" itemprop="url">Docker ELK+Filebeat安装与配置</a></h1>
+          <h1 class="post-title" itemprop="name headline">Docker ELK+Filebeat安装与配置</h1>
         
 
         <div class="post-meta">
@@ -354,9 +364,7 @@
       
 
       
-        
-          
-            <h3 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h3><ul>
+        <h3 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h3><ul>
 <li>linux<br>CentOS Linux release 7.5.1804 (Core)</li>
 <li>docker<br>Docker version 1.13.1</li>
 <li>elk<br>sebp/elk latest</li>
@@ -453,8 +461,6 @@
 <p><img src="https://upload-images.jianshu.io/upload_images/8760038-39d5b4988c00d106.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <p>参考链接：<br><a href="https://blog.csdn.net/qq_39284787/article/details/78809538" target="_blank" rel="noopener">https://blog.csdn.net/qq_39284787/article/details/78809538</a><br><a href="https://blog.csdn.net/boling_cavalry/article/details/79836171" target="_blank" rel="noopener">https://blog.csdn.net/boling_cavalry/article/details/79836171</a><br><a href="https://www.cnblogs.com/CloudMan6/p/7787870.html" target="_blank" rel="noopener">https://www.cnblogs.com/CloudMan6/p/7787870.html</a><br><a href="https://blog.csdn.net/boling_cavalry/article/details/79950677" target="_blank" rel="noopener">https://blog.csdn.net/boling_cavalry/article/details/79950677</a></p>
 
-          
-        
       
     </div>
     
@@ -469,14 +475,22 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/elk/" rel="tag"># elk</a>
+          
+            <a href="/tags/docker/" rel="tag"># docker</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -486,10 +500,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -497,6 +512,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -517,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -578,6 +606,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境说明"><span class="nav-number">1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#架构"><span class="nav-number">2.</span> <span class="nav-text">架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-ELK-套件"><span class="nav-number">3.</span> <span class="nav-text">安装 ELK 套件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Filebeat"><span class="nav-number">4.</span> <span class="nav-text">安装Filebeat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#kibana配置"><span class="nav-number">5.</span> <span class="nav-text">kibana配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -721,6 +765,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
