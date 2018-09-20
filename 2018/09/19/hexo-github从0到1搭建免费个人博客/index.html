@@ -62,7 +62,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="hexo," />
 
 
 
@@ -74,10 +74,11 @@
 
 
 <meta name="description" content="本教程详细记录了使用hexo+github从0到1搭建免费个人博客简书地址：https://www.jianshu.com/u/cfd6f3a8ae30">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+github从0到1搭建免费个人博客">
 <meta property="og:url" content="http://geekstar.site/2018/09/19/hexo-github从0到1搭建免费个人博客/index.html">
-<meta property="og:site_name" content="qijian技术栈">
+<meta property="og:site_name" content="QiJian`s Home">
 <meta property="og:description" content="本教程详细记录了使用hexo+github从0到1搭建免费个人博客简书地址：https://www.jianshu.com/u/cfd6f3a8ae30">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-05ad280306a14530.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -91,7 +92,7 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-96202cb6156174e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-390a27d8031aa99a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-dda3280b2a7ec4ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-20T02:42:05.721Z">
+<meta property="og:updated_time" content="2018-09-20T03:51:00.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+github从0到1搭建免费个人博客">
 <meta name="twitter:description" content="本教程详细记录了使用hexo+github从0到1搭建免费个人博客简书地址：https://www.jianshu.com/u/cfd6f3a8ae30">
@@ -131,7 +132,7 @@
 
 
 
-  <title>hexo+github从0到1搭建免费个人博客 | qijian技术栈</title>
+  <title>hexo+github从0到1搭建免费个人博客 | QiJian`s Home</title>
   
 
 
@@ -161,12 +162,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">qijian技术栈</span>
+        <span class="site-title">QiJian`s Home</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">记录所有技术相关</p>
+        <p class="site-subtitle">Coder，架构，大数据，技术管理</p>
       
   </div>
 
@@ -196,7 +197,27 @@
         </li>
       
         
-        <li class="menu-item menu-item-归档">
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
@@ -243,11 +264,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qijian">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/java.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="qijian技术栈">
+      <meta itemprop="name" content="QiJian`s Home">
     </span>
 
     
@@ -319,36 +340,36 @@
         <p>本教程详细记录了使用hexo+github从0到1搭建免费个人博客<br>简书地址：<a href="https://www.jianshu.com/u/cfd6f3a8ae30" target="_blank" rel="noopener">https://www.jianshu.com/u/cfd6f3a8ae30</a><br><a id="more"></a></p>
 <h3 id="基础环境搭建"><a href="#基础环境搭建" class="headerlink" title="基础环境搭建"></a>基础环境搭建</h3><ul>
 <li><p>安装node.js<br>node版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;node -v</span><br><span class="line">v8.11.1</span><br></pre></td></tr></table></figure>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;<span class="keyword">node</span> <span class="title">-v</span></span><br><span class="line">v8.<span class="number">11.1</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>安装git<br>git版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\Administrator&gt;git --version</span><br><span class="line">git version 2.9.0.windows.1</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">C</span>:\<span class="selector-tag">Users</span>\<span class="selector-tag">Administrator</span>&gt;<span class="selector-tag">git</span> <span class="selector-tag">--version</span></span><br><span class="line"><span class="selector-tag">git</span> <span class="selector-tag">version</span> 2<span class="selector-class">.9</span><span class="selector-class">.0</span><span class="selector-class">.windows</span><span class="selector-class">.1</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>选装cnpm<br>淘宝cnpm官网。由于npm国内下载速度经常抽风，所以建议安装淘宝的这个镜像；使用方法就是在命令中把npm换成cnpm即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install -g cnpm --registry=https:<span class="regexp">//</span>registry.<span class="built_in">npm</span>.taobao.org</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="安装Hexo及其相关插件"><a href="#安装Hexo及其相关插件" class="headerlink" title="安装Hexo及其相关插件"></a>安装Hexo及其相关插件</h3><ul>
 <li>全局安装Hexo</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
 <p>装完成后输入hexo -v，出现版本信息则表示安装成功。</p>
 <ul>
-<li>在项目中安装Hexo<br>在自定义目录（D:\workspace），新建hexo文件夹，然后输入cd hexo（进入该文件夹），在依次执行如下操作<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init   #这个时间也会比较长，也有可能要等几分钟，有显示 WARN 也不用管</span><br><span class="line">cnpm install #有显示 WARN 也不用管</span><br></pre></td></tr></table></figure>
+<li>在项目中安装Hexo<br>在自定义目录（D:\workspace），新建hexo文件夹，然后输入cd hexo（进入该文件夹），在依次执行如下操作<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init   <span class="comment">#这个时间也会比较长，也有可能要等几分钟，有显示 WARN 也不用管</span></span><br><span class="line">cnpm <span class="keyword">install</span> <span class="comment">#有显示 WARN 也不用管</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>安装完成之后，D:\workspace\hexo 目录结构是这样的：<br><img src="https://upload-images.jianshu.io/upload_images/8760038-05ad280306a14530.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装 hexo 后的目录结构"></p>
 <ul>
-<li>安装hexo的插件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-server --save     #搭建本地服务器所需插件</span><br><span class="line">cnpm install hexo-deployer-git --save   #使用git方式进行部署博客所需插件</span><br></pre></td></tr></table></figure>
+<li>安装hexo的插件<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm <span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save     #搭建本地服务器所需插件</span></span><br><span class="line">cnpm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save   #使用git方式进行部署博客所需插件</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="在本地生成博客静态页面并预览"><a href="#在本地生成博客静态页面并预览" class="headerlink" title="在本地生成博客静态页面并预览"></a>在本地生成博客静态页面并预览</h3><ul>
 <li>在本地生成静态页面  </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
 <p>会生成一个存放静态文件的文件夹public，其简写形式为hexo g；  </p>
 <ul>
-<li>启动本地服务器<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<li>启动本地服务器<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>其简写形式为hexo s；<br>这条指令运行完成后可在本地启动服务器并预览博客，默认网址为：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>如果以上步骤都不出意外的话，你就会看到一个Hexo博客初始化的页面。<br><img src="https://upload-images.jianshu.io/upload_images/8760038-caf38fde02b58852.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
@@ -371,12 +392,12 @@
 <h3 id="本地博客同步到GitHub上"><a href="#本地博客同步到GitHub上" class="headerlink" title="本地博客同步到GitHub上"></a>本地博客同步到GitHub上</h3><p>这一步其实就是把本地生成的博客内容（静态页面）放到GitHub新建成的仓库qijian0503.github.io中。</p>
 <ul>
 <li><p>编辑博客配置文件: _config.yml<br>在hexo根目录（也就是D:\workspace\hexo文件夹）下找到_config.yml文件，把其中的deploy参数（没有的话就按如下格式新建，注意冒号后面一定要有一个空格），修改为（你需要认真看的是含有中文注释的内容）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"># Hexo Configuration</span><br><span class="line">## Docs: https://hexo.io/docs/configuration.html</span><br><span class="line">## Source: https://github.com/hexojs/hexo/</span><br><span class="line"></span><br><span class="line"># Site，这一块区域主要是设置博客的主要说明，需要注意的是：每个冒号后面都是有一个空格，然后再书写自己的内容的</span><br><span class="line">title: qijian技术栈</span><br><span class="line">subtitle: 记录所有技术相关</span><br><span class="line">description: 技术栈</span><br><span class="line">keywords:</span><br><span class="line">author: qijian</span><br><span class="line">language: zh-Hans</span><br><span class="line">timezone:</span><br><span class="line"></span><br><span class="line"># URL，这一块一般可以设置的是 url 这个参数，比如我要设置绑定域名的，这里就需要填写我的域名信息</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://geekstar.site</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"># Directory</span><br><span class="line">source_dir: source</span><br><span class="line">public_dir: public</span><br><span class="line">tag_dir: tags</span><br><span class="line">archive_dir: archives</span><br><span class="line">category_dir: categories</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">skip_render:</span><br><span class="line"></span><br><span class="line"># Writing</span><br><span class="line">new_post_name: :title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br><span class="line">  </span><br><span class="line"># Home page setting</span><br><span class="line"># path: Root path for your blogs index page. (default = &apos;&apos;)</span><br><span class="line"># per_page: Posts displayed per page. (0 = disable pagination)</span><br><span class="line"># order_by: Posts order. (Order by date descending by default)</span><br><span class="line">index_generator:</span><br><span class="line">  path: &apos;&apos;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date</span><br><span class="line">  </span><br><span class="line"># Category &amp; Tag</span><br><span class="line">default_category: uncategorized</span><br><span class="line">category_map:</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"># Date / Time format</span><br><span class="line">## Hexo uses Moment.js to parse and display date</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 10</span><br><span class="line">pagination_dir: page</span><br><span class="line"></span><br><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">## 这里是重点，这里是修改发布地址，因为我们前面已经加了 SSH 密钥信息在 Github 设置里面了，所以只要我们电脑里面持有那两个密钥文件就可以无需密码地跟 Github 做同步。</span><br><span class="line">## 需要注意的是这里的 repo 采用的是 ssh 的地址，而不是 https 的。分支我们默认采用 master 分支，以后你翅膀硬了要换其他也无所谓。</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:qijian0503/qijian0503.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hexo Configuration</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></span><br><span class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Site，这一块区域主要是设置博客的主要说明，需要注意的是：每个冒号后面都是有一个空格，然后再书写自己的内容的</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">qijian技术栈</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">记录所有技术相关</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">技术栈</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">qijian</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br><span class="line"><span class="attr">timezone:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL，这一块一般可以设置的是 url 这个参数，比如我要设置绑定域名的，这里就需要填写我的域名信息</span></span><br><span class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://geekstar.site</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Directory</span></span><br><span class="line"><span class="attr">source_dir:</span> <span class="string">source</span></span><br><span class="line"><span class="attr">public_dir:</span> <span class="string">public</span></span><br><span class="line"><span class="attr">tag_dir:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">archive_dir:</span> <span class="string">archives</span></span><br><span class="line"><span class="attr">category_dir:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">code_dir:</span> <span class="string">downloads/code</span></span><br><span class="line"><span class="attr">i18n_dir:</span> <span class="string">:lang</span></span><br><span class="line"><span class="attr">skip_render:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">new_post_name:</span> <span class="string">:title.md</span> <span class="comment"># File name of new posts</span></span><br><span class="line"><span class="attr">default_layout:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">titlecase:</span> <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></span><br><span class="line"><span class="attr">external_link:</span> <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></span><br><span class="line"><span class="attr">filename_case:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">render_drafts:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">relative_link:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">future:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">highlight:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  auto_detect:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  tab_replace:</span></span><br><span class="line">  </span><br><span class="line"><span class="comment"># Home page setting</span></span><br><span class="line"><span class="comment"># path: Root path for your blogs index page. (default = '')</span></span><br><span class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">  order_by:</span> <span class="bullet">-date</span></span><br><span class="line">  </span><br><span class="line"><span class="comment"># Category &amp; Tag</span></span><br><span class="line"><span class="attr">default_category:</span> <span class="string">uncategorized</span></span><br><span class="line"><span class="attr">category_map:</span></span><br><span class="line"><span class="attr">tag_map:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Date / Time format</span></span><br><span class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></span><br><span class="line"><span class="comment">## You can customize the date format as defined in</span></span><br><span class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></span><br><span class="line"><span class="attr">date_format:</span> <span class="string">YYYY-MM-DD</span></span><br><span class="line"><span class="attr">time_format:</span> <span class="attr">HH:mm:ss</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Pagination</span></span><br><span class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></span><br><span class="line"><span class="attr">per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">pagination_dir:</span> <span class="string">page</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">landscape</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## 这里是重点，这里是修改发布地址，因为我们前面已经加了 SSH 密钥信息在 Github 设置里面了，所以只要我们电脑里面持有那两个密钥文件就可以无需密码地跟 Github 做同步。</span></span><br><span class="line"><span class="comment">## 需要注意的是这里的 repo 采用的是 ssh 的地址，而不是 https 的。分支我们默认采用 master 分支，以后你翅膀硬了要换其他也无所谓。</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:qijian0503/qijian0503.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>重新部署<br>在博客根目录下打开Git Bash，依次执行如下Hexo命令：</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean    #会清除缓存文件db.json及之前生成的静态文件夹public；</span><br><span class="line">hexo g     #会重新生成静态文件夹public；</span><br><span class="line">hexo deploy    #因为之前已经安装了插件并且在博客配置文件中也配置好了，所以这个命令会在博客根目录下生成一个.deploy_git的文件夹，并 把本地生成的静态文件部署到qijian0503.github.io这个仓库中的master分支上；简写形式为hexo d；</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">clean</span>    #会清除缓存文件<span class="selector-tag">db</span><span class="selector-class">.json</span>及之前生成的静态文件夹<span class="selector-tag">public</span>；</span><br><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">g</span>     #会重新生成静态文件夹<span class="selector-tag">public</span>；</span><br><span class="line"><span class="selector-tag">hexo</span> <span class="selector-tag">deploy</span>    #因为之前已经安装了插件并且在博客配置文件中也配置好了，所以这个命令会在博客根目录下生成一个<span class="selector-class">.deploy_git</span>的文件夹，并 把本地生成的静态文件部署到<span class="selector-tag">qijian0503</span><span class="selector-class">.github</span><span class="selector-class">.io</span>这个仓库中的<span class="selector-tag">master</span>分支上；简写形式为<span class="selector-tag">hexo</span> <span class="selector-tag">d</span>；</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>hexo g 和 hexo d可以合并在一起写：hexo g -d</p>
 </blockquote>
@@ -391,11 +412,11 @@
 <ol>
 <li>下载Next主题。<br>进入 hexoBlog/themes 文件夹中，打开Git Bash面板，输入：</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
 <p>把主题包克隆到themes文件夹中即可。</p>
 <ol start="2">
 <li>启用主题<br>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开themes下的主题配置文件_config.yml， 找到 theme 字段，并将其值更改为 next（注意冒号后面要留一个 空格）。</li>
-<li>验证主题<br>清除并重新生成hexo静态文件，启动本地服务器，然后通过 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 预览博客：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean      #清除静态文件</span><br><span class="line">hexo g          #重新生成静态文件</span><br><span class="line">hexo s      #启动服务器</span><br></pre></td></tr></table></figure>
+<li>验证主题<br>清除并重新生成hexo静态文件，启动本地服务器，然后通过 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 预览博客：<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean      <span class="comment">#清除静态文件</span></span><br><span class="line">hexo g          <span class="comment">#重新生成静态文件</span></span><br><span class="line">hexo s      <span class="comment">#启动服务器</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <blockquote>
@@ -410,15 +431,15 @@
 </blockquote>
 </li>
 </ul>
-<p><img src="https://upload-images.jianshu.io/upload_images/8760038-96202cb6156174e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>依次执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8760038-96202cb6156174e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>依次执行<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo clean</span> </span><br><span class="line"><span class="attribute">hexo g</span> </span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>域名解析设置<br>查看github空间服务IP：<code>ping www.qijian0503.github.io</code><br><img src="https://upload-images.jianshu.io/upload_images/8760038-390a27d8031aa99a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>登录阿里云【域名-点击域名列表中的域名-域名解析】进入域名的解析后台，添加如下两条解析记录：<br><img src="https://upload-images.jianshu.io/upload_images/8760038-dda3280b2a7ec4ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>设置好之后，等过几分钟域名解析好之后，我们访问：<a href="http://www.geekstar.site" target="_blank" rel="noopener">http://www.geekstar.site</a> ，即可通过域名访问到你的博客了。</li>
 </ul>
 <h3 id="博客操作"><a href="#博客操作" class="headerlink" title="博客操作"></a>博客操作</h3><ul>
 <li>新建文章  </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post 背影</span><br></pre></td></tr></table></figure>
-<p>执行上面命令会新建一篇名为‘背影’的文章，源文件会自动生成到hexoBlog/source/_post 路径下，后缀为点md ，直接打开编辑就可以了。编辑完保存，然后再依次执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type">post</span> 背影</span><br></pre></td></tr></table></figure>
+<p>执行上面命令会新建一篇名为‘背影’的文章，源文件会自动生成到hexoBlog/source/_post 路径下，后缀为点md ，直接打开编辑就可以了。编辑完保存，然后再依次执行<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo clean</span> </span><br><span class="line"><span class="attribute">hexo g</span> </span><br><span class="line"><span class="attribute">hexo d</span></span><br></pre></td></tr></table></figure></p>
 <p>在博客就可以看到你的文章了（有时候网络问题生成会比较慢，需要等几分钟才可以看到）。</p>
 <ul>
 <li>新建页面<br>新建标签、分类、关于我等各种页面，并在博客的菜单栏中显示。这里以新建‘标签’页面来做示范。</li>
@@ -426,10 +447,10 @@
 <ol>
 <li>创建页面</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &apos;tags&apos;</span><br></pre></td></tr></table></figure>
-<p>会在hexoBlog/source路径下自动生成一个名为tags的文件夹，里面包含一个index.md的文件，在这个文件中添加对应的页面类型type: tags：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-09-16 16:20:05</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">'tags'</span></span><br></pre></td></tr></table></figure>
+<p>会在hexoBlog/source路径下自动生成一个名为tags的文件夹，里面包含一个index.md的文件，在这个文件中添加对应的页面类型type: tags：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-09</span><span class="bullet">-16</span> <span class="number">16</span><span class="string">:20:05</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"tags"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p>
 <ol start="2">
-<li>把页面路径添加到菜单中。<br>编辑主题配置文件（themes/_config.yml）,找到munu字段，添加tag: /tags（格式为item_name: link），如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">    home: /</span><br><span class="line">    tag: /tags    #‘标签’’页面的路径</span><br></pre></td></tr></table></figure>
+<li>把页面路径添加到菜单中。<br>编辑主题配置文件（themes/_config.yml）,找到munu字段，添加tag: /tags（格式为item_name: link），如下：<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">    home:</span> /</span><br><span class="line"><span class="symbol">    tag:</span> /tags    <span class="meta">#‘标签’’页面的路径</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>参考链接：<br><a href="https://blog.csdn.net/weixin_39345384/article/details/80787998" target="_blank" rel="noopener">https://blog.csdn.net/weixin_39345384/article/details/80787998</a><br><a href="https://blog.csdn.net/qq_32454537/article/details/79482896" target="_blank" rel="noopener">https://blog.csdn.net/qq_32454537/article/details/79482896</a><br><a href="https://www.jianshu.com/p/21c94eb7bcd1" target="_blank" rel="noopener">https://www.jianshu.com/p/21c94eb7bcd1</a><br><a href="https://blog.csdn.net/linshuhe1/article/details/52424573" target="_blank" rel="noopener">https://blog.csdn.net/linshuhe1/article/details/52424573</a><br><a href="https://www.jianshu.com/p/1c98aed8d92e" target="_blank" rel="noopener">https://www.jianshu.com/p/1c98aed8d92e</a><br><a href="https://www.jianshu.com/p/ea5ac6162a96" target="_blank" rel="noopener">https://www.jianshu.com/p/ea5ac6162a96</a><br><a href="https://blog.csdn.net/u011976726/article/details/78217467" target="_blank" rel="noopener">https://blog.csdn.net/u011976726/article/details/78217467</a><br><a href="https://www.cnblogs.com/wanghuaijun/p/7073296.html" target="_blank" rel="noopener">https://www.cnblogs.com/wanghuaijun/p/7073296.html</a><br><a href="https://www.cnblogs.com/zhangqie/p/7978394.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhangqie/p/7978394.html</a></p>
@@ -447,6 +468,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+        </div>
       
 
       
@@ -531,6 +558,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/java.jpg"
+                alt="qijian" />
+            
               <p class="site-author-name" itemprop="name">qijian</p>
               <p class="site-description motion-element" itemprop="description">技术栈</p>
           </div>
@@ -540,7 +571,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
@@ -564,7 +595,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
