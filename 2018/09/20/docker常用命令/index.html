@@ -62,7 +62,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="docker," />
 
 
 
@@ -73,17 +73,22 @@
 
 
 
-<meta name="description" content="技术栈">
+<meta name="description" content="docker常用命令启动docker1systemctl start docker 查看docker启动状态 1systemctl status docker">
+<meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker常用命令">
 <meta property="og:url" content="http://geekstar.site/2018/09/20/docker常用命令/index.html">
 <meta property="og:site_name" content="QiJian`s Home">
-<meta property="og:description" content="技术栈">
+<meta property="og:description" content="docker常用命令启动docker1systemctl start docker 查看docker启动状态 1systemctl status docker">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-20T04:26:10.835Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-6a6713dfbd47d6d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-aae5f414061cc549.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-d82e7ae32352a1d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-20T04:38:12.766Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker常用命令">
-<meta name="twitter:description" content="技术栈">
+<meta name="twitter:description" content="docker常用命令启动docker1systemctl start docker 查看docker启动状态 1systemctl status docker">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8760038-6a6713dfbd47d6d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -286,6 +291,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/docker/" itemprop="url" rel="index">
+                    <span itemprop="name">docker</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -324,7 +351,56 @@
       
 
       
-        
+        <h1 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h1><p><strong>启动docker</strong><br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="literal">start</span> docker</span><br></pre></td></tr></table></figure></p>
+<p><strong>查看docker启动状态</strong></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">systemctl status docker</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p><strong>查看镜像</strong></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker images</span></span><br></pre></td></tr></table></figure>
+<p><strong>查看所有容器包括停止运行的</strong></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker ps -a</span></span><br></pre></td></tr></table></figure>
+<p><strong>启动所有容器</strong><br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start $<span class="comment">(docker ps -a -q)</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>停止容器</strong><br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">stop</span> gitlab-redis</span><br></pre></td></tr></table></figure></p>
+<p><strong>删除所有已经停止的容器</strong></p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $<span class="comment">(docker ps -a -q)</span></span><br></pre></td></tr></table></figure>
+<p><strong>删除镜像</strong>  </p>
+<ol>
+<li>需要先停止关联的容器  </li>
+<li><p>删除该容器</p>
+<blockquote>
+<p>docker rm 容器ID（CONTAINER ID）</p>
+</blockquote>
+</li>
+<li><p>删除镜像  </p>
+<blockquote>
+<p>docker rmi 镜像ID（IMAGE ID）<br>查看：<a href="https://blog.csdn.net/winy_lm/article/details/77980529" target="_blank" rel="noopener">https://blog.csdn.net/winy_lm/article/details/77980529</a> </p>
+</blockquote>
+</li>
+<li><p>批量删除名字包含”none”关键字的镜像  </p>
+<blockquote>
+<p>docker rmi $(docker images | grep “none” | awk ‘{print $3}’) </p>
+</blockquote>
+</li>
+</ol>
+<p><strong>查看指定容器log</strong><br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs 容器名称<span class="comment">(NAMES)</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="docker监控容器使用资源的情况"><a href="#docker监控容器使用资源的情况" class="headerlink" title="docker监控容器使用资源的情况"></a>docker监控容器使用资源的情况</h1><p><strong>查看容器使用的资源情况</strong>  </p>
+<p>docker stats 命令用来显示容器使用的系统资源。不带任何选项执行 docker stats 命令：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker stats</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/8760038-6a6713dfbd47d6d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>默认情况下，stats 命令会每隔 1 秒钟刷新一次输出的内容直到你按下 ctrl + c。下面是输出的主要内容：<br>[CONTAINER]：以短格式显示容器的 ID。<br>[CPU %]：CPU 的使用情况。<br>[MEM USAGE / LIMIT]：当前使用的内存和最大可以使用的内存。<br>[MEM %]：以百分比的形式显示内存使用情况。<br>[NET I/O]：网络 I/O 数据。<br>[BLOCK I/O]：磁盘 I/O 数据。<br>[PIDS]：PID 号。  </p>
+<p><strong>只返回当前的状态</strong>  </p>
+<p>如果不想持续的监控容器使用资源的情况，可以通过 –no-stream 选项只输出当前的状态：  </p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker</span> stats --<span class="literal">no</span>-stream</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/8760038-aae5f414061cc549.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p><strong>只输出指定的容器</strong><br>如果我们只想查看个别容器的资源使用情况，可以为 docker stats 命令显式的指定目标容器的名称或者是 ID：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker</span> stats --<span class="literal">no</span>-stream registry <span class="number">1493</span></span><br></pre></td></tr></table></figure>
+<p>当有很多的容器在运行时，这样的结果看起来会清爽一些。这里的 registry 和 1493 分别是容器的名称和容器的 ID。注意，多个容器的名称或者是 ID 之间需要用空格进行分割</p>
+<p><strong>显示容器名称</strong>  </p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats $(docker ps --<span class="keyword">format</span>=&#123;&#123;.Names&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>显示容器名称，且只返回当前的状态</strong>  </p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats $(docker ps --<span class="keyword">format</span>=&#123;&#123;.Names&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/8760038-d82e7ae32352a1d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>查看链接：<a href="https://www.cnblogs.com/sparkdev/p/7821376.html" target="_blank" rel="noopener">https://www.cnblogs.com/sparkdev/p/7821376.html</a></p>
+
       
     </div>
     
@@ -338,6 +414,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docker/" rel="tag"># docker</a>
+          
+        </div>
       
 
       
@@ -408,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -439,7 +530,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -473,6 +564,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker常用命令"><span class="nav-number">1.</span> <span class="nav-text">docker常用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker监控容器使用资源的情况"><span class="nav-number">2.</span> <span class="nav-text">docker监控容器使用资源的情况</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
