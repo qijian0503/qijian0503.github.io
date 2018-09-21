@@ -83,7 +83,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-05ffe6d1d6353e55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-3c071a872d7965de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-21T10:17:55.236Z">
+<meta property="og:updated_time" content="2018-09-21T10:21:21.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用docker-compose构建elasticsearch集群">
 <meta name="twitter:description" content="环境说明 linux：centos7 elasticsearch：5.6.4 elasticsearch-head：5  目录结构项目源码下载12345678910elasticsearch/├── docker-compose.yml├── head└── node    ├── es1    │   ├── data    │   └── elasticsearch.yml    └── es">
@@ -302,30 +302,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/docker-compose/" itemprop="url" rel="index">
-                    <span itemprop="name">docker-compose</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/docker-compose/elasticsearch/" itemprop="url" rel="index">
-                    <span itemprop="name">elasticsearch</span>
+                  <a href="/categories/elk/" itemprop="url" rel="index">
+                    <span itemprop="name">elk</span>
                   </a>
                 </span>
 
@@ -378,6 +356,7 @@
 <li>elasticsearch-head：5</li>
 </ul>
 <h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p><a href="https://github.com/qijian0503/docker-elasticsearch" target="_blank" rel="noopener">项目源码下载</a><br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">elasticsearch/</span><br><span class="line">├── docker-compose.yml</span><br><span class="line">├── head</span><br><span class="line">└── <span class="keyword">node</span><span class="title"></span></span><br><span class="line"><span class="title">    ├── es1</span></span><br><span class="line">    │   ├── data</span><br><span class="line">    │   └── elasticsearch.yml</span><br><span class="line">    └── es2</span><br><span class="line">        ├── data</span><br><span class="line">        └── elasticsearch.yml</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h3 id="主节点elasticsearch-yml配置文件"><a href="#主节点elasticsearch-yml配置文件" class="headerlink" title="主节点elasticsearch.yml配置文件"></a>主节点elasticsearch.yml配置文件</h3><p>elasticsearch/node/es1/elasticsearch.yml</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">network<span class="selector-class">.bind_host</span>: <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">cluster<span class="selector-class">.name</span>: elasticsearch_cluster</span><br><span class="line">cluster<span class="selector-class">.routing</span><span class="selector-class">.allocation</span><span class="selector-class">.disk</span><span class="selector-class">.threshold_enabled</span>: false</span><br><span class="line">node<span class="selector-class">.name</span>: master</span><br><span class="line">node<span class="selector-class">.master</span>: true</span><br><span class="line">node<span class="selector-class">.data</span>: true</span><br><span class="line">http<span class="selector-class">.cors</span><span class="selector-class">.enabled</span>: true</span><br><span class="line">http<span class="selector-class">.cors</span><span class="selector-class">.allow-origin</span>: <span class="string">"*"</span></span><br><span class="line">network<span class="selector-class">.host</span>: <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">discovery<span class="selector-class">.zen</span><span class="selector-class">.minimum_master_nodes</span>: <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <h3 id="从节点elasticsearch-yml配置文件"><a href="#从节点elasticsearch-yml配置文件" class="headerlink" title="从节点elasticsearch.yml配置文件"></a>从节点elasticsearch.yml配置文件</h3><p>elasticsearch/node/es2/elasticsearch.yml</p>
@@ -543,7 +522,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>

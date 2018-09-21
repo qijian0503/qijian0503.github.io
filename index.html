@@ -300,30 +300,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/docker-compose/" itemprop="url" rel="index">
-                    <span itemprop="name">docker-compose</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/docker-compose/elasticsearch/" itemprop="url" rel="index">
-                    <span itemprop="name">elasticsearch</span>
+                  <a href="/categories/elk/" itemprop="url" rel="index">
+                    <span itemprop="name">elk</span>
                   </a>
                 </span>
 
@@ -371,46 +349,19 @@
 
       
         
-          
-            <h3 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h3><ul>
+          <h3 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h3><ul>
 <li>linux：centos7</li>
 <li>elasticsearch：5.6.4</li>
 <li>elasticsearch-head：5</li>
 </ul>
 <h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><p><a href="https://github.com/qijian0503/docker-elasticsearch" target="_blank" rel="noopener">项目源码下载</a><br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">elasticsearch/</span><br><span class="line">├── docker-compose.yml</span><br><span class="line">├── head</span><br><span class="line">└── <span class="keyword">node</span><span class="title"></span></span><br><span class="line"><span class="title">    ├── es1</span></span><br><span class="line">    │   ├── data</span><br><span class="line">    │   └── elasticsearch.yml</span><br><span class="line">    └── es2</span><br><span class="line">        ├── data</span><br><span class="line">        └── elasticsearch.yml</span><br></pre></td></tr></table></figure></p>
-<h3 id="主节点elasticsearch-yml配置文件"><a href="#主节点elasticsearch-yml配置文件" class="headerlink" title="主节点elasticsearch.yml配置文件"></a>主节点elasticsearch.yml配置文件</h3><p>elasticsearch/node/es1/elasticsearch.yml</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">network<span class="selector-class">.bind_host</span>: <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">cluster<span class="selector-class">.name</span>: elasticsearch_cluster</span><br><span class="line">cluster<span class="selector-class">.routing</span><span class="selector-class">.allocation</span><span class="selector-class">.disk</span><span class="selector-class">.threshold_enabled</span>: false</span><br><span class="line">node<span class="selector-class">.name</span>: master</span><br><span class="line">node<span class="selector-class">.master</span>: true</span><br><span class="line">node<span class="selector-class">.data</span>: true</span><br><span class="line">http<span class="selector-class">.cors</span><span class="selector-class">.enabled</span>: true</span><br><span class="line">http<span class="selector-class">.cors</span><span class="selector-class">.allow-origin</span>: <span class="string">"*"</span></span><br><span class="line">network<span class="selector-class">.host</span>: <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">discovery<span class="selector-class">.zen</span><span class="selector-class">.minimum_master_nodes</span>: <span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h3 id="从节点elasticsearch-yml配置文件"><a href="#从节点elasticsearch-yml配置文件" class="headerlink" title="从节点elasticsearch.yml配置文件"></a>从节点elasticsearch.yml配置文件</h3><p>elasticsearch/node/es2/elasticsearch.yml</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">network<span class="selector-class">.bind_host</span>: <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">cluster<span class="selector-class">.name</span>: elasticsearch_cluster</span><br><span class="line">cluster<span class="selector-class">.routing</span><span class="selector-class">.allocation</span><span class="selector-class">.disk</span><span class="selector-class">.threshold_enabled</span>: false</span><br><span class="line">node<span class="selector-class">.name</span>: node2</span><br><span class="line">node<span class="selector-class">.master</span>: false</span><br><span class="line">node<span class="selector-class">.data</span>: true</span><br><span class="line">http<span class="selector-class">.cors</span><span class="selector-class">.enabled</span>: true</span><br><span class="line">http<span class="selector-class">.cors</span><span class="selector-class">.allow-origin</span>: <span class="string">"*"</span></span><br><span class="line">network<span class="selector-class">.host</span>: <span class="number">0.0</span>.<span class="number">0.0</span></span><br><span class="line">discovery<span class="selector-class">.zen</span><span class="selector-class">.minimum_master_nodes</span>: <span class="number">1</span></span><br><span class="line">discovery<span class="selector-class">.zen</span><span class="selector-class">.ping</span><span class="selector-class">.unicast</span><span class="selector-class">.hosts</span>: es1</span><br></pre></td></tr></table></figure>
-<h3 id="docker-compose-yml配置文件"><a href="#docker-compose-yml配置文件" class="headerlink" title="docker-compose.yml配置文件"></a>docker-compose.yml配置文件</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">version:</span> <span class="string">'2.0'</span></span><br><span class="line"><span class="string">services:</span></span><br><span class="line">    elasticsearch-<span class="string">central:</span></span><br><span class="line"><span class="symbol">        image:</span> <span class="string">elasticsearch:</span><span class="number">5.6</span><span class="number">.4</span></span><br><span class="line"><span class="symbol">        container_name:</span> es1</span><br><span class="line"><span class="symbol">        volumes:</span></span><br><span class="line">           - <span class="regexp">/opt/</span>modules<span class="regexp">/elasticsearch/</span>node<span class="regexp">/es1/</span><span class="string">data:</span><span class="regexp">/usr/</span>share<span class="regexp">/elasticsearch/</span>data </span><br><span class="line">           - <span class="regexp">/opt/</span>modules<span class="regexp">/elasticsearch/</span>node<span class="regexp">/es1/</span>elasticsearch.<span class="string">yml:</span><span class="regexp">/usr/</span>share<span class="regexp">/elasticsearch/</span>config/elasticsearch.yml</span><br><span class="line"><span class="symbol">        environment:</span></span><br><span class="line">           - <span class="string">"ES_JAVA_OPTS=-Xms512m -Xmx512m"</span></span><br><span class="line">           - ES_CLUSTERNAME=elasticsearch</span><br><span class="line"><span class="symbol">        command:</span> elasticsearch</span><br><span class="line"><span class="symbol">        ports:</span></span><br><span class="line">           - <span class="string">"9200:9200"</span></span><br><span class="line">           - <span class="string">"9300:9300"</span></span><br><span class="line">    elasticsearch-<span class="string">data:</span></span><br><span class="line"><span class="symbol">        image:</span> <span class="string">elasticsearch:</span><span class="number">5.6</span><span class="number">.4</span></span><br><span class="line"><span class="symbol">        container_name:</span> es2</span><br><span class="line"><span class="symbol">        volumes:</span></span><br><span class="line">           - <span class="regexp">/opt/</span>modules<span class="regexp">/elasticsearch/</span>node<span class="regexp">/es2/</span><span class="string">data:</span><span class="regexp">/usr/</span>share<span class="regexp">/elasticsearch/</span>data</span><br><span class="line">           - <span class="regexp">/opt/</span>modules<span class="regexp">/elasticsearch/</span>node<span class="regexp">/es2/</span>elasticsearch.<span class="string">yml:</span><span class="regexp">/usr/</span>share<span class="regexp">/elasticsearch/</span>config/elasticsearch.yml</span><br><span class="line"><span class="symbol">        environment:</span></span><br><span class="line">           - bootstrap.memory_lock=<span class="literal">true</span></span><br><span class="line">           - <span class="string">"ES_JAVA_OPTS=-Xms512m -Xmx512m"</span></span><br><span class="line">           - ES_CLUSTERNAME=elasticsearch</span><br><span class="line"><span class="symbol">        command:</span> elasticsearch</span><br><span class="line"><span class="symbol">        ports:</span></span><br><span class="line">           - <span class="string">"9201:9200"</span></span><br><span class="line">           - <span class="string">"9301:9300"</span></span><br><span class="line"><span class="symbol">        links:</span></span><br><span class="line">           - elasticsearch-<span class="string">central:</span>elasticsearch</span><br><span class="line">    elasticsearch-<span class="string">head:</span></span><br><span class="line"><span class="symbol">        image:</span> mobz/elasticsearch-<span class="string">head:</span><span class="number">5</span></span><br><span class="line"><span class="symbol">        container_name:</span> head</span><br><span class="line"><span class="symbol">        volumes:</span></span><br><span class="line">           - <span class="regexp">/opt/</span>modules<span class="regexp">/elasticsearch/</span>head<span class="regexp">/Gruntfile.js:/</span>usr<span class="regexp">/src/</span>app/Gruntfile.js</span><br><span class="line">           - <span class="regexp">/opt/</span>modules<span class="regexp">/elasticsearch/</span>head<span class="regexp">/_site/</span>app.<span class="string">js:</span><span class="regexp">/usr/</span>src<span class="regexp">/app/</span>_site/app.js        </span><br><span class="line"><span class="symbol">        ports:</span></span><br><span class="line">           - <span class="string">"9100:9100"</span>           </span><br><span class="line"><span class="symbol">        links:</span></span><br><span class="line">           - elasticsearch-<span class="string">central:</span>elasticsearch</span><br></pre></td></tr></table></figure>
-<h3 id="配置head"><a href="#配置head" class="headerlink" title="配置head"></a>配置head</h3><ul>
-<li>下载elasticsearch-head<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd elasticsearch</span><br><span class="line">git <span class="keyword">clone</span> <span class="title">git</span>://github.com/mobz/elasticsearch-head.git</span><br><span class="line">mv elasticsearch-head head</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>下载下来的代码结构如下：<br><img src="https://upload-images.jianshu.io/upload_images/8760038-05ffe6d1d6353e55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="elasticsearch-head目录"></p>
-<ul>
-<li><p><code>elasticsearch\head\Gruntfile.js</code>修改以下片段  </p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">connect</span>: &#123;</span><br><span class="line">	<span class="attribute">server</span>: &#123;</span><br><span class="line">		<span class="attribute">options</span>: &#123;</span><br><span class="line">		    <span class="comment">/* 默认监控：127.0.0.1,修改为：0.0.0.0 */</span></span><br><span class="line">			<span class="attribute">hostname</span>: <span class="string">'0.0.0.0'</span>,</span><br><span class="line">			<span class="attribute">port</span>: <span class="number">9100</span>,</span><br><span class="line">			<span class="attribute">base</span>: <span class="string">'.'</span>,</span><br><span class="line">			<span class="attribute">keepalive</span>: true</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>elasticsearch\head\_site\app.js</code>修改以下代码片段</p>
-</li>
-</ul>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 修改localhost为elasticsearch集群地址，Docker部署中，一般是elasticsearch宿主机地址 */</span><br><span class="line"><span class="keyword">this</span>.base_uri = <span class="keyword">this</span>.config.base_uri || <span class="keyword">this</span>.prefs.<span class="keyword">get</span>(<span class="string">"app-base_uri"</span>) || <span class="string">"http://localhost:9200"</span>;</span><br></pre></td></tr></table></figure>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><ul>
-<li>运行elasticsearch需要vm.max_map_count至少需要262144内存  </li>
-</ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">切换到root用户修改配置sysctl.conf</span><br><span class="line">vi /etc/sysctl.conf</span><br><span class="line">在尾行添加以下内容   </span><br><span class="line">vm.max_map_count=<span class="number">262144</span></span><br><span class="line">并执行命令</span><br><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>elk启动的时候可能会提示如下错误:<br>max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]  </p>
-</blockquote>
-<ul>
-<li>启动es<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker-compose <span class="meta">up</span> 启动</span><br><span class="line">docker-compose <span class="meta">down</span> 关闭</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>elasticsearch-head可视化页面：<a href="http://es所在机器IP:9100" target="_blank" rel="noopener">http://es所在机器IP:9100</a><br><img src="https://upload-images.jianshu.io/upload_images/8760038-3c071a872d7965de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="elasticsearch-head可视化页面"></p>
-<p>参考链接：<br><a href="https://www.jianshu.com/p/a26c8c7226d7" target="_blank" rel="noopener">https://www.jianshu.com/p/a26c8c7226d7</a><br><a href="https://blog.csdn.net/sinat_31908303/article/details/80496349" target="_blank" rel="noopener">https://blog.csdn.net/sinat_31908303/article/details/80496349</a><br><a href="https://blog.csdn.net/ggwxk1990/article/details/78698648" target="_blank" rel="noopener">https://blog.csdn.net/ggwxk1990/article/details/78698648</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/21/使用docker-compose构建elasticsearch集群/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1299,7 +1250,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
