@@ -81,10 +81,14 @@
 <meta property="og:site_name" content="QiJian`s Home">
 <meta property="og:description" content="前言 由于hexo已经搭建好，并且是用的next主体。这里主要介绍下，next主题相关的一些优化配置。  读者可以在 https://hexo.io/themes/ 可以查看你喜欢的主题。 这里主要介绍NexT主题的相关配置。其他主题可以多看看官方文档。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-20T05:56:53.218Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-1068b5c5e79142e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-c8924e05194c0039.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-2d94f66c344f52a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-22T06:33:31.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo-theme-next主题设置">
 <meta name="twitter:description" content="前言 由于hexo已经搭建好，并且是用的next主体。这里主要介绍下，next主题相关的一些优化配置。  读者可以在 https://hexo.io/themes/ 可以查看你喜欢的主题。 这里主要介绍NexT主题的相关配置。其他主题可以多看看官方文档。">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8760038-1068b5c5e79142e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -396,6 +400,24 @@
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">avatar:</span> <span class="meta-keyword">/images/</span>java.jpg</span><br></pre></td></tr></table></figure>
 <h3 id="设定代码高亮主题"><a href="#设定代码高亮主题" class="headerlink" title="设定代码高亮主题"></a>设定代码高亮主题</h3><p>NexT使用Tomorrow Theme作为代码高亮，共有5款主题供你选择:<br>normal | night | night eighties | night blue | night bright,默认使用的是白色的normal<br>编辑站点的_config.yml：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  line_number:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  auto_detect:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  tab_replace:</span></span><br></pre></td></tr></table></figure></p>
 <p>编辑主题的\themes\next_config.yml：<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">highlight_theme:</span> night</span><br></pre></td></tr></table></figure></p>
+<h3 id="页面访客统计"><a href="#页面访客统计" class="headerlink" title="页面访客统计"></a>页面访客统计</h3><blockquote>
+<p>在使用该配置之前，你需要先确保自己使用的Hexo博客的NexT主题。旧版的NexT主题可能不支持改配置，在进行进一步的操作之前，确保自己使用的NexT版本支持对应功能。在这里，我使用的版本为5.1.4，你可以通过查看/theme/next/_config.yml文件搜索“version”来确认自己的NexT版本。</p>
+</blockquote>
+<ul>
+<li>页面底部总访客|总访问量配置<br>打开/theme/next/_config.yml，找到如下的配置项：<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">busuanzi_count:</span><br><span class="line">  # count values only <span class="keyword">if</span> the other configs are <span class="literal">false</span></span><br><span class="line">  enable: <span class="literal">true</span></span><br><span class="line">  # custom uv span <span class="keyword">for</span> the whole site</span><br><span class="line">  site_uv: <span class="literal">true</span></span><br><span class="line">  site_uv_header: &lt;i <span class="attribute">class</span>=<span class="string">"fa fa-user"</span>&gt;&lt;/i&gt;总访客</span><br><span class="line">  site_uv_footer: 人</span><br><span class="line">  # custom pv span <span class="keyword">for</span> the whole site</span><br><span class="line">  site_pv: <span class="literal">true</span></span><br><span class="line">  site_pv_header: &lt;i <span class="attribute">class</span>=<span class="string">"fa fa-eye"</span>&gt;&lt;/i&gt;总访问量</span><br><span class="line">  site_pv_footer: 次</span><br><span class="line">  # custom pv span <span class="keyword">for</span> one<span class="built_in"> page </span>only</span><br><span class="line">  page_pv: <span class="literal">true</span></span><br><span class="line">  page_pv_header: &lt;i <span class="attribute">class</span>=<span class="string">"fa fa-file-o"</span>&gt;&lt;/i&gt;</span><br><span class="line">  page_pv_footer:</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>将enable的值由false修改为true后，重新部署即可看到效果。我这里添加了：总访客、总访问量对应的汉字描述。<br>在你完成部署后，本地预览可能你会发现，自己网站的PV数和UV数都非常大，如下所以：<br><img src="https://upload-images.jianshu.io/upload_images/8760038-1068b5c5e79142e6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="访问量"><br>这是正常情况，因为使用不蒜子统计的用户都使用同一个存储空间，如果你的URL和别人重复，就会出现数据量异常。这样的情况一般出现在你使用localhost:4000访问自己在本地部署的网页的时候。<code>hexo d</code>部署后，通过域名访问既不会出现这样的情况。<br>参考链接：<a href="https://lfwen.site/2016/11/13/next-busuanzi-vistor-count" target="_blank" rel="noopener">https://lfwen.site/2016/11/13/next-busuanzi-vistor-count</a></p>
+<ul>
+<li>百度统计  <blockquote>
+<p>配置好后，到百度统计管理系统中不会立刻有效果，需要等待一会，才会看到如下效果</p>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/8760038-c8924e05194c0039.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="百度统计"></p>
+<p>参考链接：<a href="https://blog.csdn.net/u013066244/article/details/71056834" target="_blank" rel="noopener">https://blog.csdn.net/u013066244/article/details/71056834</a></p>
+<h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>使用<a href="https://leancloud.cn/" target="_blank" rel="noopener">leancloud</a>实现，效果如下：<br><img src="https://upload-images.jianshu.io/upload_images/8760038-2d94f66c344f52a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="阅读次数"></p>
+<p>参考链接：<a href="https://lfwen.site/2016/05/31/add-count-for-hexo-next/" target="_blank" rel="noopener">https://lfwen.site/2016/05/31/add-count-for-hexo-next/</a></p>
 
       
     </div>
@@ -574,7 +596,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装主题"><span class="nav-number">2.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用主题"><span class="nav-number">3.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置语言"><span class="nav-number">4.</span> <span class="nav-text">设置语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主页文章加阴影"><span class="nav-number">5.</span> <span class="nav-text">主页文章加阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置网站图标"><span class="nav-number">6.</span> <span class="nav-text">设置网站图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置侧边栏头像"><span class="nav-number">7.</span> <span class="nav-text">设置侧边栏头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设定代码高亮主题"><span class="nav-number">8.</span> <span class="nav-text">设定代码高亮主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装主题"><span class="nav-number">2.</span> <span class="nav-text">安装主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用主题"><span class="nav-number">3.</span> <span class="nav-text">启用主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置语言"><span class="nav-number">4.</span> <span class="nav-text">设置语言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主页文章加阴影"><span class="nav-number">5.</span> <span class="nav-text">主页文章加阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置网站图标"><span class="nav-number">6.</span> <span class="nav-text">设置网站图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置侧边栏头像"><span class="nav-number">7.</span> <span class="nav-text">设置侧边栏头像</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设定代码高亮主题"><span class="nav-number">8.</span> <span class="nav-text">设定代码高亮主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面访客统计"><span class="nav-number">9.</span> <span class="nav-text">页面访客统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#阅读次数"><span class="nav-number">10.</span> <span class="nav-text">阅读次数</span></a></li></ol></div>
             
 
           </div>
