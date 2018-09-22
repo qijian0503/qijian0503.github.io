@@ -62,7 +62,7 @@
 
 
 
-  <meta name="keywords" content="docker," />
+  <meta name="keywords" content="docker,rancher," />
 
 
 
@@ -73,22 +73,23 @@
 
 
 
-<meta name="description" content="docker常用命令启动docker1systemctl start docker 查看docker启动状态 1systemctl status docker">
-<meta name="keywords" content="docker">
+<meta name="description" content="环境说明 linux：centos7 dockerDocker version 1.13.1, build dded712/1.13.1 rancher：v1.6.18   本环境搭建需要先安装docker，docker安装这里不写了，大家自行百度吧。">
+<meta name="keywords" content="docker,rancher">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker常用命令">
-<meta property="og:url" content="http://geekstar.site/2018/09/20/docker常用命令/index.html">
+<meta property="og:title" content="docker-rancher安装">
+<meta property="og:url" content="http://geekstar.site/2018/09/22/docker-rancher安装/index.html">
 <meta property="og:site_name" content="QiJian`s Home">
-<meta property="og:description" content="docker常用命令启动docker1systemctl start docker 查看docker启动状态 1systemctl status docker">
+<meta property="og:description" content="环境说明 linux：centos7 dockerDocker version 1.13.1, build dded712/1.13.1 rancher：v1.6.18   本环境搭建需要先安装docker，docker安装这里不写了，大家自行百度吧。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-6a6713dfbd47d6d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-aae5f414061cc549.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-d82e7ae32352a1d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-09-20T04:38:12.766Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-cec923fbc38dd752.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-71192bb9dae58c4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-d31484741dfaf88d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/8760038-ccf1f9125a4bad99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-22T11:26:41.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker常用命令">
-<meta name="twitter:description" content="docker常用命令启动docker1systemctl start docker 查看docker启动状态 1systemctl status docker">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8760038-6a6713dfbd47d6d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="docker-rancher安装">
+<meta name="twitter:description" content="环境说明 linux：centos7 dockerDocker version 1.13.1, build dded712/1.13.1 rancher：v1.6.18   本环境搭建需要先安装docker，docker安装这里不写了，大家自行百度吧。">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/8760038-cec923fbc38dd752.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://geekstar.site/2018/09/20/docker常用命令/"/>
+  <link rel="canonical" href="http://geekstar.site/2018/09/22/docker-rancher安装/"/>
 
 
 
 
 
-  <title>docker常用命令 | QiJian`s Home</title>
+  <title>docker-rancher安装 | QiJian`s Home</title>
   
 
 
@@ -271,7 +272,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://geekstar.site/2018/09/20/docker常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://geekstar.site/2018/09/22/docker-rancher安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="qijian">
@@ -288,7 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">docker常用命令</h1>
+          <h1 class="post-title" itemprop="name headline">docker-rancher安装</h1>
         
 
         <div class="post-meta">
@@ -300,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-20T12:26:10+08:00">
-                2018-09-20
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T19:25:49+08:00">
+                2018-09-22
               </time>
             
 
@@ -323,8 +324,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
+                  <a href="/categories/rancher/" itemprop="url" rel="index">
+                    <span itemprop="name">rancher</span>
                   </a>
                 </span>
 
@@ -340,7 +341,7 @@
 
           
           
-             <span id="/2018/09/20/docker常用命令/" class="leancloud_visitors" data-flag-title="docker常用命令">
+             <span id="/2018/09/22/docker-rancher安装/" class="leancloud_visitors" data-flag-title="docker-rancher安装">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -376,55 +377,45 @@
       
 
       
-        <h1 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h1><p><strong>启动docker</strong><br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="literal">start</span> docker</span><br></pre></td></tr></table></figure></p>
-<p><strong>查看docker启动状态</strong></p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">systemctl status docker</span></span><br></pre></td></tr></table></figure>
+        <h3 id="环境说明"><a href="#环境说明" class="headerlink" title="环境说明"></a>环境说明</h3><ul>
+<li>linux：centos7</li>
+<li>docker<br><code>Docker version 1.13.1, build dded712/1.13.1</code></li>
+<li>rancher：v1.6.18</li>
+</ul>
+<blockquote>
+<p>本环境搭建需要先安装docker，docker安装这里不写了，大家自行百度吧。</p>
+</blockquote>
 <a id="more"></a>
-<p><strong>查看镜像</strong></p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker images</span></span><br></pre></td></tr></table></figure>
-<p><strong>查看所有容器包括停止运行的</strong></p>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker ps -a</span></span><br></pre></td></tr></table></figure>
-<p><strong>启动所有容器</strong><br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start $<span class="comment">(docker ps -a -q)</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>停止容器</strong><br><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">stop</span> gitlab-redis</span><br></pre></td></tr></table></figure></p>
-<p><strong>删除所有已经停止的容器</strong></p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm $<span class="comment">(docker ps -a -q)</span></span><br></pre></td></tr></table></figure>
-<p><strong>删除镜像</strong>  </p>
-<ol>
-<li>需要先停止关联的容器  </li>
-<li><p>删除该容器</p>
-<blockquote>
-<p>docker rm 容器ID（CONTAINER ID）</p>
-</blockquote>
+<h3 id="创建MySQL容器"><a href="#创建MySQL容器" class="headerlink" title="创建MySQL容器"></a>创建MySQL容器</h3><ul>
+<li><p>创建挂载目录  </p>
+  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -<span class="selector-tag">p</span> /opt/datas/mysql/&#123;datadir,conf<span class="selector-class">.d</span>,logs&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>删除镜像  </p>
-<blockquote>
-<p>docker rmi 镜像ID（IMAGE ID）<br>查看：<a href="https://blog.csdn.net/winy_lm/article/details/77980529" target="_blank" rel="noopener">https://blog.csdn.net/winy_lm/article/details/77980529</a> </p>
-</blockquote>
+<li><p>创建mysql容器,设置密码123456  </p>
+  <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run --name mysqldb -p <span class="number">3306</span>:<span class="number">3306</span> \</span><br><span class="line">  -v /opt/datas/mysql/<span class="symbol">datadir:</span>/var/<span class="class"><span class="keyword">lib</span>/<span class="title">mysql</span> \</span></span><br><span class="line">  -v /opt/datas/mysql/conf.<span class="symbol">d:</span>/etc/mysql/conf.d \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=<span class="number">123456</span> -d <span class="symbol">mysql:</span><span class="number">5.7</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>批量删除名字包含”none”关键字的镜像  </p>
-<blockquote>
-<p>docker rmi $(docker images | grep “none” | awk ‘{print $3}’) </p>
-</blockquote>
+<li><p>查询测试  </p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mysqldb mysql -p123456 -e "<span class="keyword">show</span> <span class="keyword">databases</span>;"</span><br></pre></td></tr></table></figure>
+<p>  返回如下信息说明mysql数据库初始化成功：</p>
+  <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">| Database           |</span><br><span class="line"><span class="code">+--------------------+</span></span><br><span class="line">| information<span class="emphasis">_schema |</span></span><br><span class="line"><span class="emphasis">| cattle             |</span></span><br><span class="line"><span class="emphasis">| mysql              |</span></span><br><span class="line"><span class="emphasis">| performance_</span>schema |</span><br><span class="line">| sys                |</span><br><span class="line"><span class="code">+--------------------+</span></span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p><strong>查看指定容器log</strong><br><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs 容器名称<span class="comment">(NAMES)</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<h1 id="docker监控容器使用资源的情况"><a href="#docker监控容器使用资源的情况" class="headerlink" title="docker监控容器使用资源的情况"></a>docker监控容器使用资源的情况</h1><p><strong>查看容器使用的资源情况</strong>  </p>
-<p>docker stats 命令用来显示容器使用的系统资源。不带任何选项执行 docker stats 命令：<br><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker stats</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/8760038-6a6713dfbd47d6d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>默认情况下，stats 命令会每隔 1 秒钟刷新一次输出的内容直到你按下 ctrl + c。下面是输出的主要内容：<br>[CONTAINER]：以短格式显示容器的 ID。<br>[CPU %]：CPU 的使用情况。<br>[MEM USAGE / LIMIT]：当前使用的内存和最大可以使用的内存。<br>[MEM %]：以百分比的形式显示内存使用情况。<br>[NET I/O]：网络 I/O 数据。<br>[BLOCK I/O]：磁盘 I/O 数据。<br>[PIDS]：PID 号。  </p>
-<p><strong>只返回当前的状态</strong>  </p>
-<p>如果不想持续的监控容器使用资源的情况，可以通过 –no-stream 选项只输出当前的状态：  </p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker</span> stats --<span class="literal">no</span>-stream</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/8760038-aae5f414061cc549.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><strong>只输出指定的容器</strong><br>如果我们只想查看个别容器的资源使用情况，可以为 docker stats 命令显式的指定目标容器的名称或者是 ID：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker</span> stats --<span class="literal">no</span>-stream registry <span class="number">1493</span></span><br></pre></td></tr></table></figure>
-<p>当有很多的容器在运行时，这样的结果看起来会清爽一些。这里的 registry 和 1493 分别是容器的名称和容器的 ID。注意，多个容器的名称或者是 ID 之间需要用空格进行分割</p>
-<p><strong>显示容器名称</strong>  </p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats $(docker ps --<span class="keyword">format</span>=&#123;&#123;.Names&#125;&#125;)</span><br></pre></td></tr></table></figure>
-<p><strong>显示容器名称，且只返回当前的状态</strong>  </p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stats $(docker ps --<span class="keyword">format</span>=&#123;&#123;.Names&#125;&#125;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/8760038-d82e7ae32352a1d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>查看链接：<a href="https://www.cnblogs.com/sparkdev/p/7821376.html" target="_blank" rel="noopener">https://www.cnblogs.com/sparkdev/p/7821376.html</a></p>
+<li><p>创建库并授权(库,用户,密码都为cattle)   </p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it mysqldb mysql -p123456 -e "</span><br><span class="line">  <span class="keyword">create</span> <span class="keyword">database</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> cattle <span class="keyword">collate</span> = <span class="string">'utf8_general_ci'</span> <span class="built_in">character</span> <span class="keyword">set</span> = <span class="string">'utf8'</span>;</span><br><span class="line">  <span class="keyword">grant</span> all <span class="keyword">on</span> cattle.* <span class="keyword">to</span> <span class="string">'cattle'</span>@<span class="string">'%'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'cattle'</span>;</span><br><span class="line">  <span class="keyword">grant</span> all <span class="keyword">on</span> cattle.* <span class="keyword">to</span> <span class="string">'cattle'</span>@<span class="string">'localhost'</span> <span class="keyword">identified</span> <span class="keyword">by</span> <span class="string">'cattle'</span>;</span><br><span class="line">  <span class="keyword">flush</span> <span class="keyword">privileges</span>;<span class="keyword">show</span> <span class="keyword">databases</span>;"</span><br></pre></td></tr></table></figure>
+<p>  运行mysql容器，提示如下错误：<br>  <img src="https://upload-images.jianshu.io/upload_images/8760038-cec923fbc38dd752.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="docker-mysql-error.png"><br>  解决方法：关闭linux selinux<br>  查看：<a href="https://blog.csdn.net/lijiqidong/article/details/78482908" target="_blank" rel="noopener">https://blog.csdn.net/lijiqidong/article/details/78482908</a></p>
+</li>
+</ul>
+<h3 id="创建rancher容器"><a href="#创建rancher容器" class="headerlink" title="创建rancher容器"></a>创建rancher容器</h3><ul>
+<li><p>运行rancher容器<br>  mysql机器IP：mysql容器所在的机器IP  </p>
+  <figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">docker</span> <span class="comment">run</span> <span class="literal">-</span><span class="comment">d</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">name</span> <span class="comment">rancher</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">link=mysqldb:db</span> <span class="comment">\</span></span><br><span class="line"><span class="comment"></span><span class="literal">-</span><span class="literal">-</span><span class="comment">restart=unless</span><span class="literal">-</span><span class="comment">stopped</span> <span class="literal">-</span><span class="comment">p</span> <span class="comment">8080:8080</span> <span class="literal">-</span><span class="comment">p</span> <span class="comment">9345:9345</span> <span class="comment">rancher/server:latest</span> <span class="comment">\</span></span><br><span class="line"><span class="comment"></span><span class="literal">-</span><span class="literal">-</span><span class="comment">db</span><span class="literal">-</span><span class="comment">host</span> <span class="comment">db</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">db</span><span class="literal">-</span><span class="comment">port</span> <span class="comment">3306</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">db</span><span class="literal">-</span><span class="comment">user</span> <span class="comment">cattle</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">db</span><span class="literal">-</span><span class="comment">pass</span> <span class="comment">cattle</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">db</span><span class="literal">-</span><span class="comment">name</span> <span class="comment">cattle</span> <span class="comment">\</span></span><br><span class="line"><span class="comment"></span><span class="literal">-</span><span class="literal">-</span><span class="comment">advertise</span><span class="literal">-</span><span class="comment">address</span> <span class="comment">mysql机器IP</span></span><br></pre></td></tr></table></figure>
+<p>  等几分钟,当数据表创建超过100张时,可以打开浏览器访问rancher web管理页面了。<br>  查询cattle数据库中表的数量，显示为109时安装完成  </p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查询cattle数据库中表的数量</span></span><br><span class="line">docker <span class="keyword">exec</span> -it mysqldb mysql -<span class="string">u"cattle"</span> -h localhost -p<span class="string">"cattle"</span> -e <span class="string">"use cattle;show tables;"</span> |wc -l</span><br></pre></td></tr></table></figure>
+<p>  <img src="https://upload-images.jianshu.io/upload_images/8760038-71192bb9dae58c4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="cattle数据库"></p>
+</li>
+<li><p>rancher web管理页面<br>  访问：http://主机IP:8080</p>
+</li>
+</ul>
+<h3 id="添加主机-节点"><a href="#添加主机-节点" class="headerlink" title="添加主机(节点)"></a>添加主机(节点)</h3><p>基础架构——主机——添加主机(保存)——复制第5部代码，在需要管理的docker机器节点执行。<br><img src="https://upload-images.jianshu.io/upload_images/8760038-d31484741dfaf88d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="添加docker主机节点"></p>
+<h3 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h3><p>系统管理–访问控制–开启访问控制<br><img src="https://upload-images.jianshu.io/upload_images/8760038-ccf1f9125a4bad99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="开启访问控制"></p>
+<p>参考链接：<br><a href="https://www.cnblogs.com/elvi/p/8478551.html" target="_blank" rel="noopener">https://www.cnblogs.com/elvi/p/8478551.html</a></p>
 
       
     </div>
@@ -444,6 +435,8 @@
           
             <a href="/tags/docker/" rel="tag"># docker</a>
           
+            <a href="/tags/rancher/" rel="tag"># rancher</a>
+          
         </div>
       
 
@@ -455,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/19/hexo-github从0到1搭建免费个人博客/" rel="next" title="hexo+github从0到1搭建免费个人博客">
-                <i class="fa fa-chevron-left"></i> hexo+github从0到1搭建免费个人博客
+              <a href="/2018/09/22/hadoop-2-5-0-cdh5-3-6集群搭建/" rel="next" title="hadoop-2.5.0-cdh5.3.6集群搭建">
+                <i class="fa fa-chevron-left"></i> hadoop-2.5.0-cdh5.3.6集群搭建
               </a>
             
           </div>
@@ -464,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/20/安装Nginx/" rel="prev" title="安装Nginx">
-                安装Nginx <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -603,7 +592,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#docker常用命令"><span class="nav-number">1.</span> <span class="nav-text">docker常用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#docker监控容器使用资源的情况"><span class="nav-number">2.</span> <span class="nav-text">docker监控容器使用资源的情况</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#环境说明"><span class="nav-number">1.</span> <span class="nav-text">环境说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建MySQL容器"><span class="nav-number">2.</span> <span class="nav-text">创建MySQL容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建rancher容器"><span class="nav-number">3.</span> <span class="nav-text">创建rancher容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加主机-节点"><span class="nav-number">4.</span> <span class="nav-text">添加主机(节点)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#访问控制"><span class="nav-number">5.</span> <span class="nav-text">访问控制</span></a></li></ol></div>
             
 
           </div>
