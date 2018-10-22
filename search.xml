@@ -225,8 +225,8 @@
         <category>elk</category>
       </categories>
       <tags>
-        <tag>docker</tag>
         <tag>elk</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
 </search>
