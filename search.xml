@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[cookie跨域共享]]></title>
+    <url>%2F2019%2F07%2F20%2Fcookie%E8%B7%A8%E5%9F%9F%E5%85%B1%E4%BA%AB%2F</url>
+    <content type="text"><![CDATA[问题描述需要解决前端pc跟服务端(java)，跨域后都能获取到同一个cookie。使用二级域名共享cookie有一个限制条件，就是两个域名的二级域名必须相同 前端pc访问域名：a.b.com后端接口域名：a-gateway.b.com这两个域名同属一个二级域名：b.com 跨域访问服务器nginx增加以下配置，即可解决跨域访问的问题。也可以在程序中通过代码解决跨域访问。 nginx配置文件 1234567891011location / &#123; #是否允许跨域发送Cookie add_header Access-Control-Allow-Credentials true; add_header Access-Control-Allow-Origin 'http://a.b.com'; add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS'; add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization'; if ($request_method = 'OPTIONS') &#123; return 204; &#125;&#125; 跨域携带发送cookie如果需要允许跨域携带发送cookie的话，nignx则需要以下参数配置 nginx配置 “Access-Control-Allow-Credentials”：可选字段。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为true，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为true，如果服务器不要浏览器发送Cookie，删除该字段即可。 对于附带身份凭证的请求，服务器不得设置 Access-Control-Allow-Origin 的值为’*‘。这是因为请求的首部中携带了Cookie信息，如果 Access-Control-Allow-Origin 的值为’*‘，请求将会失败。而将 Access-Control-Allow-Origin 的值设置为 http://a.b.com，则请求将成功执行。也就是说Access-Control-Allow-Credentials设置为true的情况下Access-Control-Allow-Origin不能设置为*。 前端配置以vue请求为例： 12import axios from 'axios';axios.defaults.withCredentials=true //允许携带cookie java设置cookie 12345678910public static void addCookie(HttpServletResponse response,String cookieName,String cookieValue,int maxAge)&#123; Cookie cookie =new Cookie(cookieName,cookieValue); cookie.setDomain("b.com");//指定域名 cookie.setPath("/");//设置cookie的生命周期 cookie.setHttpOnly(false); if(maxAge&gt;0)&#123; cookie.setMaxAge(maxAge); &#125; response.addCookie(cookie);&#125;]]></content>
+      <categories>
+        <category>nginx</category>
+      </categories>
+      <tags>
+        <tag>nginx</tag>
+        <tag>cookie跨域</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[IDEA2018无期限永久破解教程]]></title>
     <url>%2F2019%2F03%2F15%2FIDEA2018%E6%97%A0%E6%9C%9F%E9%99%90%E6%B0%B8%E4%B9%85%E7%A0%B4%E8%A7%A3%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[此教程目前只针对18版本的idea，其它版本的目前没有尝试过 下载链接：https://pan.baidu.com/s/1po9grpDtI69gZH1eb27YLA提取码：pc5d复制这段内容后打开百度网盘手机App，操作更方便哦 安装直接安装或已安装的idea，我这里的安装路径是系统默认路径C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.1 破解 修改host配置文件win7下hosts文件在C:\Windows\System32\drivers\etc目录下。在hosts文件尾部添加：0.0.0.0 account.jetbrains.com 将jar复制到idea的bin目录下把JetbrainsCrack-2.9-release-enc.jar文件复制到idea的bin目录下，我这里的目录是：C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.1\bin 修改idea的bin目录下的两个配置文件修改idea的bin目录下的两个配置文件idea.exe.vmoptions和idea64.exe.vmoptions 1234在文件头或者文件尾添加 -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.1\bin\JetbrainsCrack-2.9-release-enc.jar这里的C:\Program Files\JetBrains\IntelliJ IDEA 2018.1.1\bin你要换成你自己idea的bin目录 复制注册码进行注册启动idea，点击Help-&gt;Register，将下载的破解文件中的注册码.txt中的注册码复制到Activation code中，再点击OK，即可完成破解。]]></content>
@@ -236,8 +248,8 @@
         <category>elk</category>
       </categories>
       <tags>
-        <tag>docker</tag>
         <tag>elk</tag>
+        <tag>docker</tag>
       </tags>
   </entry>
 </search>
