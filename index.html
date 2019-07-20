@@ -403,34 +403,17 @@
 
       
         
-          
-            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>需要解决前端pc跟服务端(java)，跨域后都能获取到同一个cookie。<br><strong>使用二级域名共享cookie有一个限制条件，就是两个域名的二级域名必须相同</strong></p>
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>需要解决前端pc跟服务端(java)，跨域后都能获取到同一个cookie。<br><strong>使用二级域名共享cookie有一个限制条件，就是两个域名的二级域名必须相同</strong></p>
 <blockquote>
 <p>前端pc访问域名：a.b.com<br>后端接口域名：a-gateway.b.com<br>这两个域名同属一个二级域名：b.com</p>
 </blockquote>
-<h3 id="跨域访问"><a href="#跨域访问" class="headerlink" title="跨域访问"></a>跨域访问</h3><p>服务器nginx增加以下配置，即可解决跨域访问的问题。也可以在程序中通过代码解决跨域访问。</p>
-<ul>
-<li>nginx配置文件</li>
-</ul>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;</span><br><span class="line">    #是否允许跨域发送Cookie</span><br><span class="line">    add_header <span class="keyword">Access</span>-Control-Allow-Credentials <span class="literal">true</span>;</span><br><span class="line">    add_header <span class="keyword">Access</span>-Control-Allow-Origin <span class="symbol">'http</span>://a.b.com';</span><br><span class="line">    add_header <span class="keyword">Access</span>-Control-Allow-Methods <span class="symbol">'GET</span>, POST, OPTIONS';</span><br><span class="line">    add_header <span class="keyword">Access</span>-Control-Allow-Headers <span class="symbol">'DNT</span>,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-<span class="keyword">With</span>,<span class="keyword">If</span>-Modified-Since,Cache-Control,Content-<span class="keyword">Type</span>,Authorization';</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> ($request_method = <span class="symbol">'OPTIONS</span>') &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">204</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="跨域携带发送cookie"><a href="#跨域携带发送cookie" class="headerlink" title="跨域携带发送cookie"></a>跨域携带发送cookie</h3><p>如果需要允许跨域携带发送cookie的话，nignx则需要以下参数配置</p>
-<ul>
-<li>nginx配置</li>
-</ul>
-<ol>
-<li>“Access-Control-Allow-Credentials”：可选字段。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为true，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。这个值也只能设为true，如果服务器不要浏览器发送Cookie，删除该字段即可。    </li>
-<li>对于附带身份凭证的请求，服务器不得设置 Access-Control-Allow-Origin 的值为’*‘。这是因为请求的首部中携带了Cookie信息，如果 Access-Control-Allow-Origin 的值为’*‘，请求将会失败。而将 Access-Control-Allow-Origin 的值设置为 <a href="http://a.b.com，则请求将成功执行。也就是说Access-Control-Allow-Credentials设置为true的情况下" target="_blank" rel="noopener">http://a.b.com，则请求将成功执行。也就是说Access-Control-Allow-Credentials设置为true的情况下</a><br>Access-Control-Allow-Origin不能设置为*。</li>
-</ol>
-<ul>
-<li><p>前端配置<br>以vue请求为例：</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;</span><br><span class="line">axios.defaults.withCredentials=<span class="keyword">true</span> <span class="comment">//允许携带cookie</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>java设置cookie</p>
-</li>
-</ul>
-<figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span>  addCookie(HttpServletResponse response,<span class="keyword">String</span> cookieName,<span class="keyword">String</span> cookieValue,<span class="built_in">int</span> maxAge)&#123;</span><br><span class="line">    Cookie cookie  =<span class="keyword">new</span> Cookie(cookieName,cookieValue);</span><br><span class="line">    cookie.setDomain(<span class="string">"b.com"</span>);<span class="comment">//指定域名</span></span><br><span class="line">    cookie.setPath(<span class="string">"/"</span>);<span class="comment">//设置cookie的生命周期</span></span><br><span class="line">    cookie.setHttpOnly(<span class="keyword">false</span>);</span><br><span class="line">    <span class="keyword">if</span>(maxAge&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        cookie.setMaxAge(maxAge);</span><br><span class="line">    &#125;</span><br><span class="line">    response.addCookie(cookie);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/20/cookie跨域共享/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
